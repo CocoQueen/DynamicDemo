@@ -1,4 +1,6 @@
 ext {
+//    动态切换application和lib模式
+    isApplication = false
     android = [
             compileSdkVersion: 28,
             buildToolsVersion: "28.0.3",

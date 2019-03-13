@@ -7,7 +7,8 @@ import android.os.Bundle;
  * @author：Coco
  * date：2019/3/13
  * version：1.0
- * description:组件化第三方SDK版本控制
+ * description:
+ *             first_commit:组件化第三方SDK版本控制
  *
  */
 public class MainActivity extends AppCompatActivity {
