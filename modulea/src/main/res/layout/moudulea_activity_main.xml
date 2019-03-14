@@ -3,29 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent"
+    tools:context=".MainActivityA"
+    tools:ignore="ResourceName">
 
     <TextView
-        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="这个时app中的Activity" />
-
-    <Button
-        android:id="@+id/btnA"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="goToModuleA"
-        android:text="跳转到moduleA" />
+        android:layout_centerInParent="true"
+        android:text="这个是moduleA中的activity"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btnB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="跳转进入moduleB"
         android:onClick="goToModuleB"
-        android:text="跳转到moduleB" />
-
-
+        />
+    <Button
+        android:id="@+id/btnAPP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转进入app"
+        android:onClick="goToModuleApp"
+        />
 </LinearLayout>
