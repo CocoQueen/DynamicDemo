@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.wissdom.common.base.BaseActivity;
+
 /**
  * @author：Coco date：2019/3/13
  * version：1.0
@@ -23,7 +25,7 @@ import android.widget.Button;
  * 基础组件：数据库、图片加载库、base基类等等
  * 首页组件、我的组件、其他组件、业务组件
  */
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     Fragment[] fragments = new Fragment[3];
     FragmentManager fragmentManager;
@@ -36,17 +38,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnOther;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public String initActionBar() {
+        return null;
+    }
 
+    @Override
+    public int getRootView() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initView(Bundle savedInstanceState) {
         btnHome = findViewById(R.id.btnHome);
         btnMine = findViewById(R.id.btnMine);
         btnOther = findViewById(R.id.btnOther);
 
-        btnHome.setOnClickListener(this);
-        btnMine.setOnClickListener(this);
-        btnOther.setOnClickListener(this);
+        initListenser();
 
         homeFragment = new HomeFragment();
         mineFragment = new MineFragment();
@@ -56,6 +63,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragments = new Fragment[]{homeFragment, mineFragment, otherFragment};
 
         selectTab(0);
+    }
+
+    private void initListenser() {
+        btnHome.setOnClickListener(this);
+        btnMine.setOnClickListener(this);
+        btnOther.setOnClickListener(this);
+    }
+
+    @Override
+    protected void initData(Bundle savedInstanceState) {
+
     }
 
     private void selectTab(int i) {

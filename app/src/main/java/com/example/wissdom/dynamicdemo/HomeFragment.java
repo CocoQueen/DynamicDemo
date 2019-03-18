@@ -8,15 +8,36 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.wissdom.common.base.BaseFragment;
+
 /**
  * @author：Coco date：2019/3/15
  * version：1.0
  * description:HomeFragment
  */
-public class HomeFragment extends Fragment {
-    @Nullable
+public class HomeFragment extends BaseFragment {
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home,container,false);
+    public String initActionBar() {
+        return null;
+    }
+
+    @Override
+    protected int setRootView() {
+        return R.layout.fragment_home;
+    }
+
+    @Override
+    public void initViews() {
+
+    }
+
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    public void init() {
+
     }
 }
