@@ -1,4 +1,4 @@
-package com.example.wissdom.common;
+package com.example.wissdom.home;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.wissdom.common.test", appContext.getPackageName());
+        assertEquals("com.example.wissdom.home.test", appContext.getPackageName());
     }
 }

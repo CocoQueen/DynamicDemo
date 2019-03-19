@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import com.example.wissdom.common.R;
+import com.example.wissdom.base.R;
 import com.example.wissdom.common.uitls.SharePUtil;
 import com.github.ybq.android.spinkit.SpinKitView;
 

@@ -1,4 +1,4 @@
-package com.example.wissdom.common;
+package com.example.wissdom.home;
 
 import org.junit.Test;
 

@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.example.wissdom.common.R;
+import com.example.wissdom.base.R;
 import com.github.ybq.android.spinkit.SpinKitView;
 
 /**

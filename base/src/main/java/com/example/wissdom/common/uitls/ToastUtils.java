@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.wissdom.common.R;
+import com.example.wissdom.base.R;
 import com.example.wissdom.common.base.BaseActivity;
 
 
