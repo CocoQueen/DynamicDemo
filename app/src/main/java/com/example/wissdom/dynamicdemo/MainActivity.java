@@ -1,14 +1,17 @@
 package com.example.wissdom.dynamicdemo;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
-import com.example.wissdom.common.base.BaseActivity;
+import com.example.wissdom.common.base.BaseFragmentActivity;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * @author：Coco date：2019/3/13
@@ -25,7 +28,7 @@ import com.example.wissdom.common.base.BaseActivity;
  * 基础组件：数据库、图片加载库、base基类等等
  * 首页组件、我的组件、其他组件、业务组件
  */
-public class MainActivity extends BaseActivity implements View.OnClickListener {
+public class MainActivity extends BaseFragmentActivity implements View.OnClickListener {
 
     Fragment[] fragments = new Fragment[3];
     FragmentManager fragmentManager;
@@ -33,9 +36,17 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     HomeFragment homeFragment;
     MineFragment mineFragment;
     OtherFragment otherFragment;
-    private Button btnHome;
-    private Button btnMine;
-    private Button btnOther;
+    @BindView(R.id.frame_layout)
+    FrameLayout frameLayout;
+    @BindView(R.id.btnHome)
+    Button btnHome;
+    @BindView(R.id.btnMine)
+    Button btnMine;
+    @BindView(R.id.btnOther)
+    Button btnOther;
+//    private Button btnHome;
+//    private Button btnMine;
+//    private Button btnOther;
 
     @Override
     public String initActionBar() {
@@ -49,9 +60,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     protected void initView(Bundle savedInstanceState) {
-        btnHome = findViewById(R.id.btnHome);
-        btnMine = findViewById(R.id.btnMine);
-        btnOther = findViewById(R.id.btnOther);
+//        btnHome = findViewById(R.id.btnHome);
+//        btnMine = findViewById(R.id.btnMine);
+//        btnOther = findViewById(R.id.btnOther);
 
         initListenser();
 
@@ -59,7 +70,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mineFragment = new MineFragment();
         otherFragment = new OtherFragment();
 
-        fragmentManager = getSupportFragmentManager();
+//        fragmentManager = getSupportFragmentManager();
         fragments = new Fragment[]{homeFragment, mineFragment, otherFragment};
 
         selectTab(0);
@@ -77,7 +88,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     private void selectTab(int i) {
-        transaction = fragmentManager.beginTransaction();
+        transaction = mFragmentManager.beginTransaction();
         hideAllFragment(transaction);
         //展示需要展示的tab
         if (fragments[i].isAdded()) {
@@ -110,5 +121,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             default:
                 break;
         }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
     }
 }

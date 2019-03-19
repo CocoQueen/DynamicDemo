@@ -30,11 +30,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(':base')
     if (rootProject.ext.isApplication) {
         //这里一般引入一个base/common组件
-        implementation project(':base')
     } else {
         implementation project(':modulea')
         implementation project(':moduleb')
     }
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 }
