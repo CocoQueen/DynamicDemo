@@ -54,7 +54,7 @@ dependencies {
     //解析框架
     api 'com.google.code.gson:gson:2.8.2'
     //    //数据通信工具
-    //    api 'org.greenrobot:eventbus:3.1.1'
+    api 'org.greenrobot:eventbus:3.1.1'
     api 'com.android.support:design:28+'
     //圆形view
     api 'de.hdodenhof:circleimageview:2.0.0'
@@ -81,4 +81,8 @@ dependencies {
 
     implementation rootProject.ext.dependencies.recycler_adapter
     implementation rootProject.ext.dependencies.recyclerview
+
+    //activityRouter
+    api 'com.github.mzule.activityrouter:activityrouter:1.2.2'
+    annotationProcessor 'com.github.mzule.activityrouter:compiler:1.1.7'
 }

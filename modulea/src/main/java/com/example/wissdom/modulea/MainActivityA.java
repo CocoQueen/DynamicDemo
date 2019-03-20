@@ -6,24 +6,47 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.wissdom.common.base.BaseActivity;
+import com.github.mzule.activityrouter.annotation.Router;
+
 /**
  * @author：Coco date：2019/3/13
  * version：1.0
  * description:moduleA_project
  * lib组件与主appAndroidManifest合并
  */
-public class MainActivityA extends AppCompatActivity {
+@Router("test")
+public class MainActivityA extends BaseActivity {
+
+    @Override
+    public String initActionBar() {
+        return null;
+    }
+
+    @Override
+    public int getRootView() {
+        return R.layout.moudulea_activity_main;
+    }
+
+    @Override
+    protected void initView(Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    protected void initData(Bundle savedInstanceState) {
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.moudulea_activity_main);
-        try{
-            String test = getIntent().getExtras().getString("test");
-            Toast.makeText(this,test , Toast.LENGTH_SHORT).show();
-        }catch (Exception e){
-
-        }
+//        try{
+//            String test = getIntent().getExtras().getString("test");
+//            Toast.makeText(this,test , Toast.LENGTH_SHORT).show();
+//        }catch (Exception e){
+//
+//        }
 
     }
 

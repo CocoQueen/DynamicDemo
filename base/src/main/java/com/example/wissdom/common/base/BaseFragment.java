@@ -1,5 +1,6 @@
 package com.example.wissdom.common.base;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -334,7 +335,20 @@ public abstract class BaseFragment extends Fragment {
         fragmentTransaction.show(frag);
         fragmentTransaction.commit();
     }
-
+    /**
+     * 通过包名跳转
+     * @param context 上下文
+     * @param packageName 包名
+     */
+    public void startActivityForPackageName(Context context, String packageName){
+        try {
+            Class clazz =Class.forName(packageName);
+            Intent intent =new Intent(context,clazz);
+            startActivity(intent);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
     /**
      * 退出当前
      */

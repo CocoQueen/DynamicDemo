@@ -1,6 +1,7 @@
 package com.example.wissdom.common.base;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Build;
@@ -311,6 +312,20 @@ public abstract class BaseActivity extends RxAppCompatActivity {
         }
     }
 
+    /**
+     * 通过包名跳转
+     * @param context 上下文
+     * @param packageName 包名
+     */
+    public void startActivityForPackageName(Context context,String packageName){
+        try {
+            Class clazz =Class.forName(packageName);
+            Intent intent =new Intent(context,clazz);
+            startActivity(intent);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
     public void finishSelf() {
         this.finish();
     }
