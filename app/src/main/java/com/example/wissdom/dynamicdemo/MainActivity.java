@@ -10,6 +10,7 @@ import android.widget.FrameLayout;
 
 import com.example.wissdom.common.base.BaseFragmentActivity;
 import com.example.wissdom.home.HomeFragment;
+import com.example.wissdom.mine.MineFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

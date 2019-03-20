@@ -1,4 +1,4 @@
-package com.example.wissdom.home;
+package com.example.wissdom.mine;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,7 +24,7 @@ import butterknife.Unbinder;
  * version：1.0
  * description:HomeFragment
  */
-public class HomeFragment extends BaseFragment {
+public class MineFragment extends BaseFragment {
     @BindView(R2.id.recyclerView)
     RecyclerView recyclerView;
     Unbinder unbinder;
@@ -38,7 +38,7 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected int setRootView() {
-        return R.layout.home_fragment_home;
+        return R.layout.mine_fragment;
     }
 
     @Override
@@ -55,7 +55,7 @@ public class HomeFragment extends BaseFragment {
         for (int i = 1; i <= 100; i++) {
             list.add("数据" + i);
         }
-        HomeAdapter adapter = new HomeAdapter(list);
+        MineAdapter adapter = new MineAdapter(list);
         recyclerView.setAdapter(adapter);
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override

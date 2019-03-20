@@ -1,5 +1,5 @@
 ext {
-//    动态切换application和lib模式
+//    动态切换application和lib模式 true 表示applicationfalse表示lib
     isApplication = false
     android = [
             compileSdkVersion: 28,
