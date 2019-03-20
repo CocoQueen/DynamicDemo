@@ -51,24 +51,24 @@ public class MainActivityA extends BaseActivity {
     }
 
     public void goToModuleB(View view) {
-        try {
-            Class clazz = Class.forName("com.example.wissdom.moduleb.MainActivityB");
-            Intent intent = new Intent(MainActivityA.this, clazz);
-            startActivity(intent);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        finish();
+//        try {
+//            Class clazz = Class.forName("com.example.wissdom.moduleb.MainActivityB");
+//            Intent intent = new Intent(MainActivityA.this, clazz);
+//            startActivity(intent);
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        finish();
     }
 
     public void goToModuleApp(View view) {
-        try {
-            Class clazz = Class.forName("com.example.wissdom.dynamicdemo.MainActivity");
-            Intent intent = new Intent(MainActivityA.this, clazz);
-            startActivity(intent);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        finish();
+//        try {
+//            Class clazz = Class.forName("com.example.wissdom.dynamicdemo.MainActivity");
+//            Intent intent = new Intent(MainActivityA.this, clazz);
+//            startActivity(intent);
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        finish();
     }
 }
