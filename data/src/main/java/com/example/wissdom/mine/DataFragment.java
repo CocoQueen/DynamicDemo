@@ -24,7 +24,7 @@ import butterknife.Unbinder;
  * version：1.0
  * description:HomeFragment
  */
-public class MineFragment extends BaseFragment {
+public class DataFragment extends BaseFragment {
     @BindView(R2.id.recyclerView)
     RecyclerView recyclerView;
     Unbinder unbinder;
@@ -38,7 +38,7 @@ public class MineFragment extends BaseFragment {
 
     @Override
     protected int setRootView() {
-        return R.layout.mine_fragment;
+        return R.layout.data_fragment;
     }
 
     @Override

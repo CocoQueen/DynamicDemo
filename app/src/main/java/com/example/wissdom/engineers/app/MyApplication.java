@@ -1,4 +1,4 @@
-package com.example.wissdom.dynamicdemo.app;
+package com.example.wissdom.engineers.app;
 
 import android.app.Application;
 import android.util.Log;

@@ -1,1 +1,1 @@
-include ':app', ':modulea', ':moduleb', ':base', ':home', ':mine'
+include ':app', ':deploy', ':work', ':base', ':home', ':data'

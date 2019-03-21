@@ -11,35 +11,37 @@
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="9">
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="9">-->
 
-        <Button
-            android:id="@+id/btnHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="首页" />
+    <!--<Button-->
+    <!--android:id="@+id/btnHome"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="首页" />-->
 
-        <Button
-            android:id="@+id/btnMine"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="我的" />
+    <!--<Button-->
+    <!--android:id="@+id/btnMine"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="我的" />-->
 
-        <Button
-            android:id="@+id/btnOther"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="其他" />
+    <!--<Button-->
+    <!--android:id="@+id/btnOther"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="其他" />-->
 
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
+
+    <include layout="@layout/layout_bottom_container" />
 
 </LinearLayout>

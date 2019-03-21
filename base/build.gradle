@@ -85,4 +85,6 @@ dependencies {
     //activityRouter
     api 'com.github.mzule.activityrouter:activityrouter:1.2.2'
     annotationProcessor 'com.github.mzule.activityrouter:compiler:1.1.7'
+    //logger日志打印框架
+    api 'com.orhanobut:logger:2.1.1'
 }

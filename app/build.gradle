@@ -35,9 +35,9 @@ dependencies {
         //这里一般引入一个base/common组件
     } else {
         implementation project(':home')
-        implementation project(':mine')
-        implementation project(':moduleb')
-        implementation project(':modulea')
+        implementation project(':data')
+        implementation project(':deploy')
+        implementation project(':work')
     }
     implementation 'com.jakewharton:butterknife:8.4.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'

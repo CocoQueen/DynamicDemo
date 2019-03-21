@@ -1,12 +1,4 @@
-package com.example.wissdom.dynamicdemo;
-
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+package com.example.wissdom.engineers;
 
 import com.example.wissdom.common.base.BaseFragment;
 
@@ -15,7 +7,7 @@ import com.example.wissdom.common.base.BaseFragment;
  * version：1.0
  * description:HomeFragment
  */
-public class OtherFragment extends BaseFragment {
+public class WorkFragment extends BaseFragment {
     @Override
     public String initActionBar() {
         return null;
@@ -23,7 +15,7 @@ public class OtherFragment extends BaseFragment {
 
     @Override
     protected int setRootView() {
-        return R.layout.fragment_other;
+        return R.layout.fragment_work;
     }
 
     @Override

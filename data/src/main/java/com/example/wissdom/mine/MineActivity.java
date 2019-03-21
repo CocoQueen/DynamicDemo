@@ -1,7 +1,6 @@
 package com.example.wissdom.mine;
 
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.wissdom.common.base.BaseFragmentActivity;
@@ -26,7 +25,7 @@ public class MineActivity extends BaseFragmentActivity {
     @Override
     protected void initView(Bundle savedInstanceState) {
         FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout, new MineFragment());
+        fragmentTransaction.replace(R.id.frame_layout, new DataFragment());
         fragmentTransaction.commit();
     }
 
